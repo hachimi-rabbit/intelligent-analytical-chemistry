@@ -2,7 +2,7 @@
 
 主题：以拉曼矿物分类教学模拟讲解机器学习、泄漏、泛化验证与结果解释。专题覆盖第4章整体；拉曼是贯穿案例。数据全部为模拟，不报告实测矿物鉴定性能，不要求购买仪器或GPU。
 
-任务入口：[上游 Issue #2](https://github.com/Oaham725/intelligent-analytical-chemistry/issues/2)。该 Issue 关联课程提交 PR。正式合并和课程网站上线由教师审核决定。
+任务入口：[上游 Issue #2](https://github.com/Oaham725/intelligent-analytical-chemistry/issues/2)。正式提交：[上游 PR #3](https://github.com/Oaham725/intelligent-analytical-chemistry/pull/3)。正式合并和课程网站上线由教师审核决定。
 
 ## 要求逐项对应
 
