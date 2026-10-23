@@ -1,23 +1,11 @@
-"""第4章代码练习：机器学习基础：任务、模型、泛化与解释
+"""第4章可运行入口：拉曼教学模拟与泛化验证。
 
-任务：构造含重复样品和批次的数据，对比随机划分、GroupKFold与时间外推。
-运行方式：python chapter_exercise.py
-所有合成数据仅用于验证接口；换用真实数据时必须保留样品/批次分组。
+从仓库根目录运行 python code/ch04.py；其参数转交主案例。
+完整复现、扩展与校验见 code/ch04_exercises/raman/README.md。
+所有数据为教学模拟，不代表实测矿物性能。
 """
+from pathlib import Path
+import runpy
 
-import numpy as np
-
-rng = np.random.default_rng(42)
-
-groups=np.repeat(np.arange(8),5)
-X=rng.normal(size=(40,12))
-y=rng.normal(size=40)
-for held_out in np.unique(groups):
-    test=groups==held_out
-    train=~test
-    assert set(groups[train]).isdisjoint(groups[test])
-    # fit preprocessing and model on train only
-
-# TODO 1: 用课程或开放数据替换合成输入，明确对象为含重复谱图、化合物身份和采集时间的数据集。
-# TODO 2: 实现比较随机、按化合物分组和时间外推三种划分，并与随机划分或默认流程对照。
-# TODO 3: 输出检查概率校准、少数类召回和最高置信错误，据此判断能否确定模型是否真正学到可迁移的化学结构。
+if __name__ == "__main__":
+    runpy.run_path(str(Path(__file__).parent / "ch04_exercises/raman/exercise.py"), run_name="__main__")

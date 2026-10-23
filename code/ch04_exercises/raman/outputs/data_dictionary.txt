@@ -1,0 +1,50 @@
+G04 Raman teaching dataset: SYNTHETIC, NOT EXPERIMENTAL.
+
+metadata.csv: one row per scan, 540 rows. row_id is unique; specimen_id is
+the independent physical-specimen group; mineral/class_id is the teaching
+target (0 Quartz, 1 Calcite, 2 Gypsum); instrument is A/B; scan_id is 1..3;
+partition is development/holdout; analysis_role controls eligibility.
+development_A: 72 specimens/216 scans used for development.
+unused_development_B: 216 scans explicitly excluded from all model fitting,
+cross-validation, model selection and final evaluation.
+holdout_A and holdout_B: the SAME 18 previously unseen specimens, 54 scans
+per instrument. No development specimen occurs in either holdout.
+
+specimen_metadata.csv: 90 independent units and selected generation parameters.
+spectra.csv: row_id followed by 601 intensity features in arbitrary units.
+shift_0200 ... shift_1400 are schematic Raman-shift coordinates (cm^-1), step 2.
+wavenumbers.csv: numeric coordinate mapping. spectra.npz stores the same X,
+wavenumber and row_id arrays without CSV rounding (load with allow_pickle=False).
+Intensity values include independent detector noise and may be slightly negative.
+
+row_oof.csv: out-of-fold predictions; one row for each development scan,
+model and CV strategy (4 models x 2 strategies x 216 rows).
+row_random is a deliberately leaky spectrum-row split. specimen_group keeps
+all scans from a specimen together. Each scan is predicted exactly once.
+sample_oof.csv: votes of the three OOF scan predictions for each specimen,
+model and strategy. For row_random these predictions may come from different
+fitted folds (recorded in folds); hence the aggregation does not cure leakage.
+vote_tie means tied vote counts. Prespecified tie rule selects the lowest
+encoded class among ties. No probability calibration is claimed.
+model_comparison.csv: pooled OOF row and specimen scores, not fold means.
+Models are selected only by specimen-group specimen-level macro-F1.
+
+holdout_*_predictions.csv: predictions from the ONE selected, frozen model,
+fit on all development A rows. A and B use identical new physical specimens.
+negative_control_labels.csv: a balanced random label permutation across the
+72 development specimens, inherited by their repeated scans, seed 2027.
+negative_control_*_oof.csv: 1NN only; classes are artificial random targets.
+The control is independent of model selection and uses no held-out data.
+
+metrics.json: actual computed scores, selected model, versions and limitations.
+split_audit.json: row/specimen/class counts and specimen intersections by fold.
+simulation_config.json: all fixed generation settings and schematic templates.
+The peak templates are rounded teaching parameters, not authoritative peak
+positions, measured reference spectra, or evidence of peak assignments.
+Specimen fingerprints/backgrounds are persistent simulated nuisance features;
+instrument B applies a common shift, extra broadening, response and background.
+
+Figures are exported as both PNG and editable SVG with English annotations.
+All spectra/figures/results describe this simulation only. Technical repeats
+are correlated. External independent sample size is 18, not 54 or 108.
+The negative-control finite-sample macro-F1 need not equal exactly 1/3.

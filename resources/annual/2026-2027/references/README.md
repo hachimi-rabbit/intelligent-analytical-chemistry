@@ -27,8 +27,70 @@
 <a id="ch04"></a>
 ## 第4章 机器学习：化学计量学的非线性扩展
 
-1. Wu, Z. *et al.* [MoleculeNet: a benchmark for molecular machine learning](https://doi.org/10.1039/C7SC02664A). *Chemical Science* **9**, 513–530 (2018).
-   - 用途：用于讨论数据集划分、基准比较、分子表征与模型泛化；提醒读者不能只报告单次随机划分的最好分数。
+1. Wu, Zhenqin; Ramsundar, Bharath; Feinberg, Evan N.; et al.. [MoleculeNet: a benchmark for molecular machine learning](https://doi.org/10.1039/C7SC02664A). *Chemical Science* **9**, 513-530 (2018).
+   - 用途：4.2：化学任务的基准与划分，保留原章节首批引文。
+
+2. Hastie, Trevor; Tibshirani, Robert; Friedman, Jerome. [The Elements of Statistical Learning](https://doi.org/10.1007/978-0-387-84858-7). *Springer, 2nd ed.* (2009).
+   - 用途：4.1–4.5：偏差、方差、正则化、核方法与集成的系统教材。
+
+3. Hoerl, Arthur E.; Kennard, Robert W.. [Ridge Regression: Biased Estimation for Nonorthogonal Problems](https://doi.org/10.1080/00401706.1970.10488634). *Technometrics* **12**, 55-67 (1970).
+   - 用途：4.3：岭回归的收缩估计与共线性。
+
+4. Tibshirani, Robert. [Regression Shrinkage and Selection Via the Lasso](https://doi.org/10.1111/j.2517-6161.1996.tb02080.x). *Journal of the Royal Statistical Society Series B: Statistical Methodology* **58**, 267-288 (1996).
+   - 用途：4.3：L1惩罚和变量选择的原始方法。
+
+5. Zou, Hui; Hastie, Trevor. [Regularization and Variable Selection Via the Elastic Net](https://doi.org/10.1111/j.1467-9868.2005.00503.x). *Journal of the Royal Statistical Society Series B: Statistical Methodology* **67**, 301-320 (2005).
+   - 用途：4.3：Elastic Net与相关变量组。
+
+6. Cortes, Corinna; Vapnik, Vladimir. [Support-vector networks](https://doi.org/10.1007/BF00994018). *Machine Learning* **20**, 273-297 (1995).
+   - 用途：4.4：最大间隔与支持向量分类。
+
+7. Breiman, Leo. [Random Forests](https://doi.org/10.1023/A:1010933404324). *Machine Learning* **45**, 5-32 (2001).
+   - 用途：4.5：随机森林、自助抽样和特征随机化。
+
+8. Friedman, Jerome H.. [Greedy function approximation: A gradient boosting machine](https://doi.org/10.1214/aos/1013203451). *The Annals of Statistics* **29**, 1189-1232 (2001).
+   - 用途：4.5：梯度提升的函数逼近框架。
+
+9. Angelopoulos, Anastasios N.; Bates, Stephen. [Conformal Prediction: A Gentle Introduction](https://doi.org/10.1561/2200000101). *Foundations and Trends® in Machine Learning* **16**, 494-591 (2023).
+   - 用途：4.6：共形预测、可交换性、边际覆盖和适用边界。
+
+10. Kapoor, Sayash; Narayanan, Arvind. [Leakage and the reproducibility crisis in machine-learning-based science](https://doi.org/10.1016/j.patter.2023.100804). *Patterns* **4**, 100804 (2023).
+   - 用途：4.2、4.8：科学机器学习中的数据泄漏与复现风险。
+
+11. Baek, Sung-June; Park, Aaron; Ahn, Young-Jin; et al.. [Baseline correction using asymmetrically reweighted penalized least squares smoothing](https://doi.org/10.1039/C4AN01061B). *The Analyst* **140**, 250-257 (2015).
+   - 用途：4.8：arPLS基线算法来源。案例中的参数和性能是独立教学设计。
+
+12. Kapoor, Sayash; Cantrell, Emily M.; Peng, Kenny; et al.. [REFORMS: Consensus-based Recommendations for Machine-learning-based Science](https://doi.org/10.1126/sciadv.adk3452). *Science Advances* **10**, eadk3452 (2024).
+   - 用途：4.9：2024年方法学共识与报告规范，不是矿物识别性能证据。
+
+13. Lilek, David; Zimmermann, Daniel; Steininger, Lukas; et al.. [Machine Learning of Raman Spectroscopic Data: Comparison of Different Validation Strategies](https://doi.org/10.1002/jrs.6842). *Journal of Raman Spectroscopy* **56**, 867-877 (2025).
+   - 用途：4.9：2025年生物拉曼验证策略研究。分组对象与矿物任务不同。
+
+14. Hollmann, Noah; Müller, Samuel; Purucker, Lennart; et al.. [Accurate predictions on small data with a tabular foundation model](https://doi.org/10.1038/s41586-024-08328-6). *Nature* **637**, 319-326 (2025).
+   - 用途：4.9：2025年表格基础模型研究，讨论预训练模型仍需独立验证。
+
+15. Rasmussen, C. E.; Williams, C. K. I.. [Gaussian Processes for Machine Learning](https://gaussianprocess.org/gpml/). MIT Press (2006).
+   - 用途：4.4：核协方差、后验均值与方差。
+
+16. Cawley, G. C.; Talbot, N. L. C.. [On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation](https://www.jmlr.org/papers/v11/cawley10a.html). *Journal of Machine Learning Research* **11**, 2079–2107 (2010).
+   - 用途：4.2：模型选择偏差与嵌套验证。
+
+17. Guo, C.; Pleiss, G.; Sun, Y.; Weinberger, K. Q.. [On Calibration of Modern Neural Networks](https://proceedings.mlr.press/v70/guo17a.html). *Proceedings of Machine Learning Research* **70**, 1321–1330 (2017).
+   - 用途：4.6：概率校准的经典研究，图像与文本实验结论不能直接当作谱学性能。
+
+18. Lundberg, S. M.; Lee, S.-I.. [A Unified Approach to Interpreting Model Predictions](https://proceedings.neurips.cc/paper_files/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html). *Advances in Neural Information Processing Systems* **30** (2017).
+   - 用途：4.7：SHAP方法原始来源，归因不构成因果证明。
+
+19. Ovadia, Y.; et al.. [Can You Trust Your Model’s Uncertainty? Evaluating Predictive Uncertainty under Dataset Shift](https://proceedings.neurips.cc/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html). *Advances in Neural Information Processing Systems* **32** (2019).
+   - 用途：4.6：分布漂移下不确定度失效的研究依据。
+
+20. scikit-learn developers. [Probability calibration](https://scikit-learn.org/stable/modules/calibration.html). Official documentation, accessed 2026-10-23.
+   - 用途：4.6与校准代码：模型拟合和校准的数据隔离。实现锁定scikit-learn 1.8.0，stable网页会更新。
+
+21. RRUFF Project. [RRUFF mineral database](https://www.rruff.net/). Database, accessed 2026-10-23.
+   - 用途：4.8：真实矿物参考谱扩展入口。本练习未下载或使用RRUFF谱图，也不假定它提供配对双仪器数据。
+
+检索核对日期：2026-10-23。来源为出版社、会议论文站、作者教材站、Crossref书目元数据和官方技术文档。年度前沿集中于2024–2025年可核查材料，不声称穷尽2026年全部研究。Raman验证论文已核对出版社摘要、数据可用性说明和书目信息；未将摘要外实验细节写成已核实事实。对应 [G04任务 #2](https://github.com/Oaham725/intelligent-analytical-chemistry/issues/2)。
 
 <a id="ch05"></a>
 ## 第5章 实验设计、贝叶斯推理与主动学习

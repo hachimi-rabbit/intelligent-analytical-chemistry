@@ -1,0 +1,709 @@
+{
+  "data_status": "SYNTHETIC TEACHING DATA; NOT EXPERIMENTAL SPECTRA",
+  "seed": 2026,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8"
+  },
+  "class_order": [
+    "Quartz",
+    "Calcite",
+    "Gypsum"
+  ],
+  "independent_unit": "physical specimen",
+  "total_specimens": 90,
+  "total_rows": 540,
+  "development_specimens": 72,
+  "development_rows_A": 216,
+  "unused_development_rows_B": 216,
+  "holdout_specimens": 18,
+  "cv_folds": 4,
+  "cv_results": {
+    "row_random": {
+      "Dummy": {
+        "row": {
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.16666666666666666,
+          "confusion_matrix": [
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 1.0,
+            "Calcite": 0.0,
+            "Gypsum": 0.0
+          }
+        },
+        "sample": {
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.16666666666666666,
+          "confusion_matrix": [
+            [
+              24,
+              0,
+              0
+            ],
+            [
+              24,
+              0,
+              0
+            ],
+            [
+              24,
+              0,
+              0
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 1.0,
+            "Calcite": 0.0,
+            "Gypsum": 0.0
+          }
+        }
+      },
+      "1NN": {
+        "row": {
+          "balanced_accuracy": 0.9861111111111112,
+          "macro_f1": 0.986042740798065,
+          "confusion_matrix": [
+            [
+              69,
+              2,
+              1
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              72
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 0.9583333333333334,
+            "Calcite": 1.0,
+            "Gypsum": 1.0
+          }
+        },
+        "sample": {
+          "balanced_accuracy": 0.9861111111111112,
+          "macro_f1": 0.9861050803300043,
+          "confusion_matrix": [
+            [
+              23,
+              1,
+              0
+            ],
+            [
+              0,
+              24,
+              0
+            ],
+            [
+              0,
+              0,
+              24
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 0.9583333333333334,
+            "Calcite": 1.0,
+            "Gypsum": 1.0
+          }
+        }
+      },
+      "PCA_LR": {
+        "row": {
+          "balanced_accuracy": 0.8333333333333334,
+          "macro_f1": 0.8325437148512588,
+          "confusion_matrix": [
+            [
+              56,
+              15,
+              1
+            ],
+            [
+              13,
+              55,
+              4
+            ],
+            [
+              3,
+              0,
+              69
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 0.7777777777777778,
+            "Calcite": 0.7638888888888888,
+            "Gypsum": 0.9583333333333334
+          }
+        },
+        "sample": {
+          "balanced_accuracy": 0.8472222222222222,
+          "macro_f1": 0.8472222222222222,
+          "confusion_matrix": [
+            [
+              19,
+              5,
+              0
+            ],
+            [
+              4,
+              19,
+              1
+            ],
+            [
+              1,
+              0,
+              23
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 0.7916666666666666,
+            "Calcite": 0.7916666666666666,
+            "Gypsum": 0.9583333333333334
+          }
+        }
+      },
+      "RBF_SVC": {
+        "row": {
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              0,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              72
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 1.0,
+            "Calcite": 1.0,
+            "Gypsum": 1.0
+          }
+        },
+        "sample": {
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              24,
+              0,
+              0
+            ],
+            [
+              0,
+              24,
+              0
+            ],
+            [
+              0,
+              0,
+              24
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 1.0,
+            "Calcite": 1.0,
+            "Gypsum": 1.0
+          }
+        }
+      }
+    },
+    "specimen_group": {
+      "Dummy": {
+        "row": {
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.16666666666666666,
+          "confusion_matrix": [
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ],
+            [
+              72,
+              0,
+              0
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 1.0,
+            "Calcite": 0.0,
+            "Gypsum": 0.0
+          }
+        },
+        "sample": {
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.16666666666666666,
+          "confusion_matrix": [
+            [
+              24,
+              0,
+              0
+            ],
+            [
+              24,
+              0,
+              0
+            ],
+            [
+              24,
+              0,
+              0
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 1.0,
+            "Calcite": 0.0,
+            "Gypsum": 0.0
+          }
+        }
+      },
+      "1NN": {
+        "row": {
+          "balanced_accuracy": 0.5509259259259259,
+          "macro_f1": 0.5496727076917899,
+          "confusion_matrix": [
+            [
+              33,
+              24,
+              15
+            ],
+            [
+              16,
+              47,
+              9
+            ],
+            [
+              21,
+              12,
+              39
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 0.4583333333333333,
+            "Calcite": 0.6527777777777778,
+            "Gypsum": 0.5416666666666666
+          }
+        },
+        "sample": {
+          "balanced_accuracy": 0.5555555555555555,
+          "macro_f1": 0.553749166515124,
+          "confusion_matrix": [
+            [
+              11,
+              8,
+              5
+            ],
+            [
+              5,
+              16,
+              3
+            ],
+            [
+              7,
+              4,
+              13
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 0.4583333333333333,
+            "Calcite": 0.6666666666666666,
+            "Gypsum": 0.5416666666666666
+          }
+        }
+      },
+      "PCA_LR": {
+        "row": {
+          "balanced_accuracy": 0.7361111111111112,
+          "macro_f1": 0.735169082125604,
+          "confusion_matrix": [
+            [
+              45,
+              21,
+              6
+            ],
+            [
+              12,
+              54,
+              6
+            ],
+            [
+              9,
+              3,
+              60
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 0.625,
+            "Calcite": 0.75,
+            "Gypsum": 0.8333333333333334
+          }
+        },
+        "sample": {
+          "balanced_accuracy": 0.7361111111111112,
+          "macro_f1": 0.735169082125604,
+          "confusion_matrix": [
+            [
+              15,
+              7,
+              2
+            ],
+            [
+              4,
+              18,
+              2
+            ],
+            [
+              3,
+              1,
+              20
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 0.625,
+            "Calcite": 0.75,
+            "Gypsum": 0.8333333333333334
+          }
+        }
+      },
+      "RBF_SVC": {
+        "row": {
+          "balanced_accuracy": 0.8472222222222222,
+          "macro_f1": 0.8472686733556299,
+          "confusion_matrix": [
+            [
+              57,
+              6,
+              9
+            ],
+            [
+              3,
+              60,
+              9
+            ],
+            [
+              6,
+              0,
+              66
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 0.7916666666666666,
+            "Calcite": 0.8333333333333334,
+            "Gypsum": 0.9166666666666666
+          }
+        },
+        "sample": {
+          "balanced_accuracy": 0.8472222222222222,
+          "macro_f1": 0.8472686733556299,
+          "confusion_matrix": [
+            [
+              19,
+              2,
+              3
+            ],
+            [
+              1,
+              20,
+              3
+            ],
+            [
+              2,
+              0,
+              22
+            ]
+          ],
+          "recall_per_class": {
+            "Quartz": 0.7916666666666666,
+            "Calcite": 0.8333333333333334,
+            "Gypsum": 0.9166666666666666
+          }
+        }
+      }
+    }
+  },
+  "selection_rule": "highest specimen-group OOF specimen-vote macro-F1; ties use Dummy, 1NN, PCA_LR, RBF_SVC order",
+  "vote_tie_policy": "lowest encoded class among tied classes (Quartz, Calcite, Gypsum order)",
+  "selected_model": "RBF_SVC",
+  "paired_holdout": {
+    "selected_model": "RBF_SVC",
+    "A": {
+      "n_rows": 54,
+      "n_specimens": 18,
+      "row": {
+        "balanced_accuracy": 0.8333333333333334,
+        "macro_f1": 0.8363636363636363,
+        "confusion_matrix": [
+          [
+            18,
+            0,
+            0
+          ],
+          [
+            3,
+            15,
+            0
+          ],
+          [
+            6,
+            0,
+            12
+          ]
+        ],
+        "recall_per_class": {
+          "Quartz": 1.0,
+          "Calcite": 0.8333333333333334,
+          "Gypsum": 0.6666666666666666
+        }
+      },
+      "sample": {
+        "balanced_accuracy": 0.8333333333333334,
+        "macro_f1": 0.8363636363636363,
+        "confusion_matrix": [
+          [
+            6,
+            0,
+            0
+          ],
+          [
+            1,
+            5,
+            0
+          ],
+          [
+            2,
+            0,
+            4
+          ]
+        ],
+        "recall_per_class": {
+          "Quartz": 1.0,
+          "Calcite": 0.8333333333333334,
+          "Gypsum": 0.6666666666666666
+        }
+      },
+      "sample_vote_ties": 0
+    },
+    "B": {
+      "n_rows": 54,
+      "n_specimens": 18,
+      "row": {
+        "balanced_accuracy": 0.2777777777777778,
+        "macro_f1": 0.2147005143520823,
+        "confusion_matrix": [
+          [
+            11,
+            7,
+            0
+          ],
+          [
+            14,
+            4,
+            0
+          ],
+          [
+            6,
+            12,
+            0
+          ]
+        ],
+        "recall_per_class": {
+          "Quartz": 0.6111111111111112,
+          "Calcite": 0.2222222222222222,
+          "Gypsum": 0.0
+        }
+      },
+      "sample": {
+        "balanced_accuracy": 0.27777777777777773,
+        "macro_f1": 0.2081447963800905,
+        "confusion_matrix": [
+          [
+            4,
+            2,
+            0
+          ],
+          [
+            5,
+            1,
+            0
+          ],
+          [
+            2,
+            4,
+            0
+          ]
+        ],
+        "recall_per_class": {
+          "Quartz": 0.6666666666666666,
+          "Calcite": 0.16666666666666666,
+          "Gypsum": 0.0
+        }
+      },
+      "sample_vote_ties": 0
+    }
+  },
+  "negative_control": {
+    "row_random": {
+      "row": {
+        "balanced_accuracy": 0.9722222222222222,
+        "macro_f1": 0.9721739130434782,
+        "confusion_matrix": [
+          [
+            66,
+            0,
+            6
+          ],
+          [
+            0,
+            72,
+            0
+          ],
+          [
+            0,
+            0,
+            72
+          ]
+        ],
+        "recall_per_class": {
+          "random_0": 0.9166666666666666,
+          "random_1": 1.0,
+          "random_2": 1.0
+        }
+      },
+      "sample": {
+        "balanced_accuracy": 0.9722222222222222,
+        "macro_f1": 0.9721739130434782,
+        "confusion_matrix": [
+          [
+            22,
+            0,
+            2
+          ],
+          [
+            0,
+            24,
+            0
+          ],
+          [
+            0,
+            0,
+            24
+          ]
+        ],
+        "recall_per_class": {
+          "random_0": 0.9166666666666666,
+          "random_1": 1.0,
+          "random_2": 1.0
+        }
+      }
+    },
+    "specimen_group": {
+      "row": {
+        "balanced_accuracy": 0.45370370370370366,
+        "macro_f1": 0.4577643140085323,
+        "confusion_matrix": [
+          [
+            33,
+            27,
+            12
+          ],
+          [
+            16,
+            32,
+            24
+          ],
+          [
+            9,
+            30,
+            33
+          ]
+        ],
+        "recall_per_class": {
+          "random_0": 0.4583333333333333,
+          "random_1": 0.4444444444444444,
+          "random_2": 0.4583333333333333
+        }
+      },
+      "sample": {
+        "balanced_accuracy": 0.4583333333333333,
+        "macro_f1": 0.46237347358904346,
+        "confusion_matrix": [
+          [
+            11,
+            9,
+            4
+          ],
+          [
+            5,
+            11,
+            8
+          ],
+          [
+            3,
+            10,
+            11
+          ]
+        ],
+        "recall_per_class": {
+          "random_0": 0.4583333333333333,
+          "random_1": 0.4583333333333333,
+          "random_2": 0.4583333333333333
+        }
+      }
+    }
+  },
+  "scientific_checks": {
+    "development_holdout_specimen_intersection": 0,
+    "all_grouped_cv_specimen_intersections": 0,
+    "paired_A_B_holdout_specimens_identical": true,
+    "all_rows_have_one_oof_prediction_per_model_strategy": true,
+    "B_development_rows_used_in_model_fitting": 0,
+    "hyperparameters_tuned_on_holdout": false
+  },
+  "limits": [
+    "Synthetic closed-set teaching data; not evidence of analytical validity.",
+    "Technical replicates do not increase the independent sample count.",
+    "Two instruments and 18 held-out specimens do not represent all instruments or mineral matrices.",
+    "No confidence interval is inferred from correlated scan rows.",
+    "An absent positive-task score gap does not validate a leaky split.",
+    "The random-label control measures identity memorization; its finite-sample score need not be exactly one third."
+  ]
+}

@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+outputs/spectra.csv
+outputs/spectra.npz
+outputs/*.png
+reproduced/
