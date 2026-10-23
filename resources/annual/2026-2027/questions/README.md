@@ -25,7 +25,7 @@
 
 ### ch04
 
-本组题目对应[第4章](#/docs/ch04)、[拉曼代码与数据说明](#/code/ch04_exercises/raman/README)和[G04任务 #2](https://github.com/Oaham725/intelligent-analytical-chemistry/issues/2)。贡献提交：[PR #3](https://github.com/Oaham725/intelligent-analytical-chemistry/pull/3)，以下答案用于交叉评审和下一届教学。
+本组题目对应[第4章](#/docs/ch04)和[拉曼代码与数据说明](#/code/ch04_exercises/raman/README)。当前在[个人工作分支](https://github.com/hachimi-rabbit/intelligent-analytical-chemistry/tree/ch04/raman-workbench)完善，暂不提交课程 Issue / PR；以下答案作为后续交叉评审和教学的草稿。
 
 #### 题一 高分来自化学还是标本身份
 
