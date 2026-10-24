@@ -1,14 +1,25 @@
 # G04 拉曼分类与泛化验证
 
+[返回仓库使用说明](../../../README.md) · [成果与要求对照](../../../resources/annual/2026-2027/student-reports/ch04/README.md) · [第4章正文](../../../docs/ch04.md)
+
 本练习支撑第4章机器学习的整章教学，核心问题是重复扫描如何影响验证，以及模型怎样应对新仪器。全部谱图为教学模拟，没有使用实测矿物数据或RRUFF谱图。运行无须GPU、API密钥或网络数据下载。
+
+## 先选择要做的事
+
+- **只读结果：** 打开[结果目录](outputs/)，或下载完整工作分支并解压，双击 `assets/interactive/ch04.html`。不需要运行Python。
+- **独立复现：** 按下面的环境安装和运行步骤执行，从模拟生成到结果核验完整跑一遍。
+- **修改模型或参数：** 先理解“数据与实验规则”，记录修改；重新生成输出和网页数据，再运行检查。当前工作仅在个人仓库的任务分支进行。
+
+请先确认下载或切换的是 `ch04/raman-workbench` 分支。下列命令均在仓库根目录执行，也就是能同时看到 `README.md`、`docs`、`code` 和 `assets` 的文件夹。
 
 ## 从干净环境运行
 
-建议Python 3.12，从仓库根目录执行。依赖文件锁定本次实际运行的版本。首次安装需要访问PyPI。
+建议Python 3.12。依赖文件锁定本次实际运行的版本。首次安装需要访问PyPI，生成模拟谱与训练模型不需要下载外部数据。
+
+Linux / macOS：
 
 ```bash
 python -m venv .venv-g04
-# Linux/macOS
 .venv-g04/bin/python -m pip install -r code/ch04_exercises/raman/requirements.txt
 .venv-g04/bin/python code/ch04_exercises/raman/exercise.py
 .venv-g04/bin/python code/ch04_exercises/raman/extensions.py
@@ -17,7 +28,21 @@ python -m venv .venv-g04
 .venv-g04/bin/python code/ch04_exercises/raman/verify.py
 ```
 
-Windows把`.venv-g04/bin/python`换为`.venv-g04\Scripts\python.exe`。也可激活虚拟环境后直接使用`python`。若只阅读，已有小型输出和离线交互页可直接使用。完整执行通常为数分钟，取决于CPU和线性代数线程设置。
+Windows PowerShell（已安装Python 3.12及其`py`启动器）：
+
+```powershell
+py -3.12 -m venv .venv-g04
+.\.venv-g04\Scripts\python.exe -m pip install -r code/ch04_exercises/raman/requirements.txt
+.\.venv-g04\Scripts\python.exe code/ch04_exercises/raman/exercise.py
+.\.venv-g04\Scripts\python.exe code/ch04_exercises/raman/extensions.py
+.\.venv-g04\Scripts\python.exe code/ch04_exercises/03_probability_calibration.py --output code/ch04_exercises/raman/outputs/calibration.json
+.\.venv-g04\Scripts\python.exe code/ch04_exercises/raman/export_interactive.py
+.\.venv-g04\Scripts\python.exe code/ch04_exercises/raman/verify.py
+```
+
+上述命令直接调用虚拟环境中的Python，无须先激活环境。若没有`py`启动器，可以在确认`python --version`显示3.12后，用`python -m venv .venv-g04`创建环境。完整执行通常为数分钟，取决于CPU和线性代数线程设置。
+
+成功标志：当前版本的`verify.py`输出JSON，其中`passed`为75；主案例A/B标本宏F1约为0.8364/0.2081。具体结果解释见下文。建议独立复现者记录操作系统、Python版本、执行命令、输出数值和遇到的问题，作为组内核验材料。
 
 ## 数据与实验规则
 
