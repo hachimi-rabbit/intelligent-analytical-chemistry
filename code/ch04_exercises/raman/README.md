@@ -6,15 +6,35 @@
 
 ## 先选择要做的事
 
-- **只读结果：** 打开[结果目录](outputs/)，或下载完整工作分支并解压，双击 `assets/interactive/ch04.html`。不需要运行Python。
+- **只读结果：** 打开[结果目录](outputs/)，或下载完整 `main` 分支并解压，双击 `assets/interactive/ch04.html`。不需要运行Python。
 - **独立复现：** 按下面的环境安装和运行步骤执行，从模拟生成到结果核验完整跑一遍。
 - **修改模型或参数：** 先理解“数据与实验规则”，记录修改；重新生成输出和网页数据，再运行检查。当前工作仅在个人仓库的任务分支进行。
 
-请先确认下载或切换的是 `ch04/raman-workbench` 分支。下列命令均在仓库根目录执行，也就是能同时看到 `README.md`、`docs`、`code` 和 `assets` 的文件夹。
+请先确认下载或切换的是个人仓库的 `main` 分支。下列命令均在仓库根目录执行，也就是能同时看到 `README.md`、`docs`、`code` 和 `assets` 的文件夹。
+
+## 一条命令完成复现
+
+先按下一节创建Python 3.12虚拟环境并安装依赖，然后选择自己系统的命令：
+
+```bash
+# Linux / macOS
+.venv-g04/bin/python code/ch04_exercises/raman/reproduce.py
+```
+
+```powershell
+# Windows PowerShell
+.\.venv-g04\Scripts\python.exe code/ch04_exercises/raman/reproduce.py
+```
+
+脚本按顺序执行主实验、199次随机标签置换与五种子扩展、独立校准、网页数据导出和核验，共5步。缺少依赖或版本不符时会停止并提示；不会自动安装软件。每步日志位于 `outputs/reproduction_logs/`，运行记录位于 `outputs/reproduction_record.json`。仅当5步全部成功，记录的 `status` 才是 `passed`；失败后先读对应日志。
+
+默认命令会重新生成 `outputs/` 和网页数据。若要在独立目录复现，在上述命令末尾加 `--output code/ch04_exercises/raman/reproduced`。此时网页数据保存为该目录内的 `ch04-results.js`，不会修改网站使用的文件。脚本支持含中文或空格的目录；路径含空格时加引号。记录如何填写见[组内复现模板](../../../resources/annual/2026-2027/student-reports/ch04/collaboration.md)。
 
 ## 从干净环境运行
 
 建议Python 3.12。依赖文件锁定本次实际运行的版本。首次安装需要访问PyPI，生成模拟谱与训练模型不需要下载外部数据。
+
+下列分步命令与一条命令复现是两种运行方式，不必重复执行。
 
 Linux / macOS：
 
@@ -42,7 +62,7 @@ py -3.12 -m venv .venv-g04
 
 上述命令直接调用虚拟环境中的Python，无须先激活环境。若没有`py`启动器，可以在确认`python --version`显示3.12后，用`python -m venv .venv-g04`创建环境。完整执行通常为数分钟，取决于CPU和线性代数线程设置。
 
-成功标志：当前版本的`verify.py`输出JSON，其中`passed`为75；主案例A/B标本宏F1约为0.8364/0.2081。具体结果解释见下文。建议独立复现者记录操作系统、Python版本、执行命令、输出数值和遇到的问题，作为组内核验材料。
+成功标志：当前版本的`verify.py`输出JSON，其中`passed`为83；主案例A/B标本宏F1约为0.8364/0.2081。具体结果解释见下文。建议独立复现者记录操作系统、Python版本、执行命令、输出数值和遇到的问题，作为组内核验材料。
 
 ## 数据与实验规则
 
@@ -78,7 +98,17 @@ py -3.12 -m venv .venv-g04
 
 ## 验收
 
-`verify.py`独立复算CV和留出指标，核对分组隔离、配对标本、种子完整性、逐谱转换独立性，以及拟合/校准/阈值/测试四组互斥。`node code/ch04_exercises/raman/test_interactive.cjs`使用Node内置断言检查网页划分计数和全部面板混淆矩阵。另有可选的`test_interactive_browser.cjs`检查真实DOM交互，需要单独安装Playwright及其Chromium浏览器。脚本检查不能替代同学交叉评审，不能证明模拟的物理真实性。
+`verify.py`独立复算CV和留出指标，核对分组隔离、配对标本、种子完整性、逐谱转换独立性，以及拟合/校准/阈值/测试四组互斥，并拒绝缺失的模型/种子组合、重复标本记录和未更新的网页数据。`node code/ch04_exercises/raman/test_interactive.cjs`使用Node内置断言检查网页划分计数和全部面板混淆矩阵。另有可选的`test_interactive_browser.cjs`检查真实DOM交互，需要单独安装Playwright及其Chromium浏览器。脚本检查不能替代同学交叉评审，不能证明模拟的物理真实性。
+
+若修改了核验或导出逻辑，可运行 `python code/ch04_exercises/raman/test_verification.py`。这些回归测试在临时副本中故意删除一组预测、复制一条预测及改坏网页导出，确认核验会报错，不会改动仓库结果。
+
+## 常见问题
+
+- `No module named ...` 或依赖版本不符：用当前虚拟环境的Python执行 `-m pip install -r code/ch04_exercises/raman/requirements.txt`，避免安装到另一套Python。
+- 找不到脚本：确认终端位于包含 `README.md`、`docs`、`code`、`assets` 的仓库根目录。
+- 提示 `browser export matches Python results`：数值文件与网页导出不一致，重新执行完整复现，或对同一输出目录执行导出和核验。
+- GitHub上HTML显示源代码：下载并解压完整目录，双击 `assets/interactive/ch04.html`。
+- 数值与本仓库略有差异：先比较依赖、种子、参数和分区，保留日志；不要通过换种子挑出相同或更高的分数。
 
 ## 实际实验扩展
 

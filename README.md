@@ -2,7 +2,7 @@
 
 我们负责第4章机器学习，用“拉曼矿物分类与跨仪器验证”的教学模拟，讲清**模型为什么会泛化失败，以及如何避免数据泄漏**。本仓库基于[课程原仓库](https://github.com/Oaham725/intelligent-analytical-chemistry)的教材底稿继续完善，小组新增工作集中在第4章及其配套资源。
 
-**当前阶段：在自己的仓库完善材料。** 最新成果请查看 [`ch04/raman-workbench`](https://github.com/hachimi-rabbit/intelligent-analytical-chemistry/tree/ch04/raman-workbench) 分支。暂不创建或重新开启课程仓库的 Issue / PR；正式提交由作者确认后安排。
+**当前阶段：在自己的仓库完善材料。** 已核验成果汇总在本仓库 [`main`](https://github.com/hachimi-rabbit/intelligent-analytical-chemistry/tree/main) 主分支，打开仓库首页即可阅读。暂不创建或重新开启课程仓库的 Issue / PR；正式提交由作者确认后安排。
 
 ## 第一次打开，从这里开始
 
@@ -20,10 +20,10 @@ GitHub仓库可以理解为带修改历史的网上项目文件夹；README就�
 | 成果 | 打开材料 | 当前状态 |
 |---|---|---|
 | 第4章教材内容 | [正文](docs/ch04.md) | 4.1–4.9节已有初稿，覆盖基础方法、验证、解释、案例和前沿 |
-| 图解与结果图 | [知识图谱](assets/graphs/ch04.svg)、[验证流程图](assets/graphs/ch04-validation.svg)、[实验输出](code/ch04_exercises/raman/outputs/) | 已有可编辑SVG和计算结果，需继续完善与正文的衔接 |
-| 参考文献与前沿 | [年度第4章引文](resources/annual/2026-2027/references/README.md#ch04)、[正文前沿卡](docs/ch04.md) | 21项来源、3张前沿卡；待统一书目格式并复核关键论述 |
+| 图解与结果图 | [知识图谱](assets/graphs/ch04.svg)、[验证流程图](assets/graphs/ch04-validation.svg)、[实验输出](code/ch04_exercises/raman/outputs/) | 已有可编辑SVG；正文已嵌入模拟谱、配对混淆矩阵与扩展对照图 |
+| 参考文献与前沿 | [年度第4章引文](resources/annual/2026-2027/references/README.md#ch04)、[正文前沿卡](docs/ch04.md) | 21项来源、3张前沿卡；已统一书目格式；重点来源已复核，仍需组员核读 |
 | 传承题与答案 | [第4章题目](resources/annual/2026-2027/questions/README.md#ch04) | 已有4道题及评分要点 |
-| 可复现代码与数据说明 | [代码说明](code/ch04_exercises/raman/README.md)、[数据字典](code/ch04_exercises/raman/outputs/data_dictionary.txt) | 程序和核验已运行，待组员独立复现 |
+| 可复现代码与数据说明 | [代码说明](code/ch04_exercises/raman/README.md)、[数据字典](code/ch04_exercises/raman/outputs/data_dictionary.txt) | 已有一条命令复现、分步日志和结果一致性检查，待组员独立复现 |
 | 互动学习模块 | [互动页面源文件](assets/interactive/ch04.html) | 划分、模型、仪器、种子、预处理均可切换；打开方式见下文 |
 | 课堂汇报 | [PPTX](resources/annual/2026-2027/student-reports/ch04/G04-Raman-Report.pptx)、[PDF](resources/annual/2026-2027/student-reports/ch04/G04-Raman-Report.pdf)、[讲稿](resources/annual/2026-2027/student-reports/ch04/speaker-notes.md) | 已有12页初稿，待分工、排练和实际汇报 |
 | 协作与正式提交 | [课程流程](docs/course/workflow.md) | 已有个人分支提交记录；正式提交、真人交叉评审和教师审核尚未完成 |
@@ -34,7 +34,7 @@ GitHub仓库可以理解为带修改历史的网上项目文件夹；README就�
 
 GitHub中的HTML文件链接通常展示源文件，不会直接运行交互。只看互动模块，不需要安装Python：
 
-1. 在仓库左上方分支菜单选择 `ch04/raman-workbench`。
+1. 在仓库左上方分支菜单确认当前为 `main`。
 2. 点击绿色 **Code → Download ZIP**，下载并完整解压当前分支。
 3. 在解压后的文件夹中，依次打开 `assets` → `interactive`，双击 `ch04.html`。
 4. 切换“逐谱随机划分”和“按物理标本分组”，观察两侧共享标本数；再切换模型、测试仪器和预处理。
@@ -53,11 +53,11 @@ Windows也可使用 `py -m http.server 8000`。随后访问 `http://localhost:80
 
 - [ ] 确认组员和实际分工，在个人工作记录中写清负责人及对应修改。
 - [ ] 由另一位组员按运行说明独立复现，记录环境、命令、结果和遇到的问题。
-- [ ] 核读正文，统一文献格式；将关键结果图加入讲解，检查链接和历史提交说明。
+- [ ] 核读正文与已嵌入的结果图，试做传承题，检查论述是否得到文献和数据支持。
 - [ ] 在汇报用电脑上演示互动页面，准备PPT分工并排练答辩。
 - [ ] 作者确认可以正式提交后，再按课程流程办理任务登记、Issue、PR和交叉评审。
 
-建议按“正文与公式、代码与复现、文献与题目、图表与汇报”分工，每人从工作分支建立自己的任务分支。先记录和推送各自的修改，再由负责人检查后汇总。组员姓名和贡献按实际工作填写。
+建议按“正文与公式、代码与复现、文献与题目、图表与汇报”分工，每人从个人仓库的 `main` 建立任务分支。具体操作见[组内协作与复现记录](resources/annual/2026-2027/student-reports/ch04/collaboration.md)。组员姓名和贡献按实际工作填写。
 
 ## 数据范围与使用限制
 
@@ -69,4 +69,4 @@ Windows也可使用 `py -m http.server 8000`。随后访问 `http://localhost:80
 
 保留的其他章节、课程流程和原始目录来自[课程原仓库](https://github.com/Oaham725/intelligent-analytical-chemistry)。可查看[全书阅读说明](docs/README.md)、[课程任务地图](docs/course/task-map.md)和[课程量规](docs/course/rubric.md)。本页介绍G04个人工作区，不代表课程维护方的正式公告。
 
-当前Pages工作流仅在 `main` 的推送或手动触发时运行，推送本工作分支不会自动发布新版网站。原有 `publish_github.sh` 是发布工具，不属于阅读或复现实验的步骤；本阶段先使用上述文件与本地预览方式。
+仓库已有Pages工作流，`main` 推送符合其触发条件；是否成功发布取决于本仓库的Actions与Pages设置，不能仅凭推送成功判断网站已更新。原有 `publish_github.sh` 是发布工具，不属于阅读或复现实验的步骤；本阶段先使用上述文件与本地预览方式。

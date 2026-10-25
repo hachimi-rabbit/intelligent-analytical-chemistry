@@ -1,0 +1,4 @@
+# Local G04 environment and Python caches are generated, not course material.
+/.venv-g04/
+__pycache__/
+*.py[cod]

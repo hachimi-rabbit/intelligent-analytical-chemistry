@@ -4,3 +4,5 @@ outputs/spectra.csv
 outputs/spectra.npz
 outputs/*.png
 reproduced/
+outputs/reproduction_logs/
+outputs/reproduction_record.json

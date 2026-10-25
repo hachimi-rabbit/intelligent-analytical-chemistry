@@ -46,4 +46,4 @@ REFORMS: Kapoor et al., Science Advances 2024, DOI:10.1126/sciadv.adk3452。Lile
 
 ## 第12页
 
-完整交付见docs/ch04.md、code/ch04_exercises/raman/README.md。工作Issue：https://github.com/Oaham725/intelligent-analytical-chemistry/issues/2 。实验数据全部为模拟。真实配对验证需独立标本、仪器元数据、固定流程与新留出集，不应使用历史测试结果反复优化。
+完整交付见docs/ch04.md、code/ch04_exercises/raman/README.md。当前成果：https://github.com/hachimi-rabbit/intelligent-analytical-chemistry/tree/main 。材料在个人仓库完善，课程Issue与PR暂缓。实验数据全部为模拟。真实配对验证需独立标本、仪器元数据、固定流程与新留出集，不应使用历史测试结果反复优化。
