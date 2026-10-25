@@ -1,0 +1,215 @@
+{
+  "data_status": "REAL MEASURED, SOURCE-PROCESSED RRUFF SPECTRA",
+  "source_doi": "10.11583/DTU.20222331.v1",
+  "n_spectra": 52,
+  "n_specimens": 22,
+  "class_order": [
+    "Quartz",
+    "Calcite",
+    "Gypsum"
+  ],
+  "counts": {
+    "Calcite": {
+      "spectra": 26,
+      "specimens": 10
+    },
+    "Gypsum": {
+      "spectra": 5,
+      "specimens": 2
+    },
+    "Quartz": {
+      "spectra": 21,
+      "specimens": 10
+    }
+  },
+  "metrics": {
+    "Dummy": {
+      "specimen": {
+        "macro_f1": 0.20833333333333334,
+        "balanced_accuracy": 0.3333333333333333,
+        "confusion_matrix": [
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ]
+      },
+      "spectrum": {
+        "macro_f1": 0.2222222222222222,
+        "balanced_accuracy": 0.3333333333333333,
+        "confusion_matrix": [
+          [
+            0,
+            21,
+            0
+          ],
+          [
+            0,
+            26,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ]
+        ]
+      }
+    },
+    "Cosine_1NN": {
+      "specimen": {
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      "spectrum": {
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            21,
+            0,
+            0
+          ],
+          [
+            0,
+            26,
+            0
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ]
+      }
+    },
+    "PCA8_LR": {
+      "specimen": {
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      "spectrum": {
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            21,
+            0,
+            0
+          ],
+          [
+            0,
+            26,
+            0
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ]
+      }
+    },
+    "RBF_SVC": {
+      "specimen": {
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      "spectrum": {
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            21,
+            0,
+            0
+          ],
+          [
+            0,
+            26,
+            0
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ]
+      }
+    }
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "sklearn": "1.8.0"
+  },
+  "limits": [
+    "Gypsum: only two specimens.",
+    "Leave-one-specimen-out, not an independent external test.",
+    "Source preprocessing predates our model evaluation.",
+    "No instrument transfer claim; laser wavelength is not instrument ID.",
+    "No model was selected using these results. Future tuning needs nested validation or new held-out specimens."
+  ]
+}

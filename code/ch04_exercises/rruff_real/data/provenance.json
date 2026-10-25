@@ -1,0 +1,32 @@
+{
+  "data_status": "MEASURED RAMAN SPECTRA; SOURCE-PROCESSED; NOT SIMULATED",
+  "dataset_doi": "10.11583/DTU.20222331.v1",
+  "download_url": "https://ndownloader.figshare.com/files/36144495",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "archive_sha256": "90f029cda4380f74d7f51b0295532e68cf196b1de8afa3c6a9dd225f9bad398f",
+  "archive_md5": "f3280bc15f1739baf7d243c4835ab2d4",
+  "authors": [
+    "Bo Li",
+    "Mikkel N. Schmidt",
+    "Tommy S. Alstrøm"
+  ],
+  "source_publication": "https://doi.org/10.1039/D2AN00403H",
+  "original_database": "https://www.rruff.net/",
+  "original_database_reference": "https://doi.org/10.1515/9783110417104-003",
+  "mapping_reference": "https://github.com/lyn1874/raman_spectra_matching_with_contrastive_learning/blob/main/data/prepare_data.py",
+  "archive_members": [
+    "public_dataset/mineral_preprocess/excellent_unoriented_unoriented.csv",
+    "public_dataset/mineral_preprocess/spectra.obj"
+  ],
+  "selection": "All Quartz, Calcite and Gypsum records after raw==0 filter; source order preserved.",
+  "changes": "Subset selected and converted to CSV + numeric NPZ. Original archived coordinate/intensity pairs preserved; no generated spectra.",
+  "n_spectra": 52,
+  "n_specimens": 22,
+  "limits": [
+    "Gypsum has only two RRUFF IDs.",
+    "RRUFF IDs are grouping proxies; shared origin/parent-rock dependencies are not resolved.",
+    "Laser wavelength does not identify a spectrometer.",
+    "Author archive is a historical RRUFF derivative, not a current complete RRUFF export."
+  ]
+}

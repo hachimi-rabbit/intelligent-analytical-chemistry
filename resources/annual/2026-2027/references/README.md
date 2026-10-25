@@ -88,7 +88,18 @@
    - 用途：4.6与校准代码：模型拟合和校准的数据隔离。实现锁定scikit-learn 1.8.0，stable网页会更新。
 
 21. RRUFF Project. [RRUFF mineral database](https://www.rruff.net/). Database, accessed 2026-10-23.
-   - 用途：4.8：真实矿物参考谱扩展入口。本练习未下载或使用RRUFF谱图，也不假定它提供配对双仪器数据。
+   - 用途：4.8：原始数据库入口。4.8.6已通过DTU作者存档使用历史RRUFF实测谱；未假定存在配对双仪器数据。
+
+22. Li, B.; Schmidt, M. N.; Alstrøm, T. S. [Datasets for replicating the paper “Raman Spectrum Matching with Contrastive Representation Learning”](https://doi.org/10.11583/DTU.20222331.v1). Technical University of Denmark, version 1 (2022). CC BY 4.0.
+   - 用途：4.8.6真实主案例的直接数据来源。下载并核验存档，保留52条已处理实测谱及22个RRUFF ID；不是原始探测器信号。
+
+23. Li, B.; Schmidt, M. N.; Alstrøm, T. S. [Raman spectrum matching with contrastive representation learning](https://doi.org/10.1039/D2AN00403H). *Analyst* **147**, 2238–2246 (2022).
+   - 用途：说明数据存档所属研究及元数据映射来源。本案例使用其数据，不宣称复现该论文的对比学习模型或性能。
+
+24. Lafuente, B.; Downs, R. T.; Yang, H.; Stone, N. [The power of databases: the RRUFF project](https://doi.org/10.1515/9783110417104-003). In *Highlights in Mineralogical Crystallography*, pp. 1–30 (2015).
+   - 用途：RRUFF数据库原始归属；具体标本链接保留在真实数据manifest中。
+
+真实数据补充核对：已验证DTU存档版本、许可、文件哈希及作者映射代码；来源与改动见[归属说明](#/code/ch04_exercises/rruff_real/ATTRIBUTION)。
 
 检索核对日期：2026-10-23。来源为出版社、会议论文站、作者教材站、Crossref书目元数据和官方技术文档。年度前沿集中于2024–2025年可核查材料，不声称穷尽2026年全部研究。Raman验证论文已核对出版社摘要、数据可用性说明和书目信息；未将摘要外实验细节写成已核实事实。当前成果见[个人仓库 main](https://github.com/hachimi-rabbit/intelligent-analytical-chemistry/tree/main)，课程Issue与PR暂缓。
 

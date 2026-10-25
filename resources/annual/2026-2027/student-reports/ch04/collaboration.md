@@ -1,6 +1,6 @@
 # G04 组内协作与独立复现
 
-[返回项目首页](../../../../../README.md) · [成果与要求对照](README.md) · [代码运行说明](../../../../../code/ch04_exercises/raman/README.md)
+[返回项目首页](../../../../../README.md) · [成果与要求对照](README.md) · [代码运行说明](../../../../../code/ch04_exercises/rruff_real/README.md)
 
 本页供组员在自己的仓库完善材料。汇总入口是 [hachimi-rabbit/intelligent-analytical-chemistry 的 main 分支](https://github.com/hachimi-rabbit/intelligent-analytical-chemistry/tree/main)。课程原仓库的任务Issue、PR和正式评审暂缓；这里的工作记录不能代替课程提交。
 
@@ -9,7 +9,7 @@
 | 任务 | 主要文件 | 完成时交给组内检查的内容 |
 |---|---|---|
 | 正文与图解 | `docs/ch04.md` | 修订文字、图文一致性检查，能解释独立标本与重复谱的区别 |
-| 代码与复现 | `code/ch04_exercises/raman/` | 运行记录、失败日志、结果核对和修复说明 |
+| 代码与复现 | `code/ch04_exercises/rruff_real/` | 运行记录、失败日志、结果核对和修复说明 |
 | 文献与题目 | 年度 `references/README.md`、`questions/README.md` 的第4章部分 | 原始来源核对、论述修改、四道题的试做与反馈 |
 | 汇报与演示 | 当前目录的PPTX、PDF、讲稿 | 负责人、实际讲解时长、演示顺序和预演反馈 |
 
@@ -36,11 +36,11 @@
 | 来源版本 | 仓库、分支、提交编号，或下载日期 |
 | 系统和Python | 待填写 |
 | 安装命令 | 待填写 |
-| 完整运行命令 | 待填写，建议使用 `reproduce.py --output code/ch04_exercises/raman/reproduced` |
+| 完整运行命令 | 待填写，建议使用 `reproduce.py --output code/ch04_exercises/rruff_real/reproduced` |
 | 五步执行状态 | 未完成；运行后查看 `reproduction_record.json` 与各步日志 |
 | 数据核对 | 是否90个标本、540条谱，A/B留出是否同一18个标本 |
-| 主案例结果 | A/B标本宏F1实际值；参考约0.8364/0.2081 |
-| 扩展结果 | B宏F1五种子均值实际值；原始/处理后参考约0.2783/0.9888 |
+| 主案例结果 | 实测22折结果：Dummy宏F1参考0.2083，其余三模型1.0000；同时记录52条谱/22个ID |
+| 扩展结果 | 可选模拟对照另运行raman模块，不能把其A/B与预处理增益写成实测结果 |
 | 网页检查 | 能否打开、切换划分/模型/仪器/种子，是否有报错 |
 | 遇到的问题 | 完整报错、如何定位、采取了什么修改；没有问题则写“未遇到” |
 | 理解检查 | 用自己的话解释为什么逐谱随机高分不能证明新标本识别能力 |

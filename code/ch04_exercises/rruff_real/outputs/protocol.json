@@ -1,0 +1,30 @@
+{
+  "classes": [
+    "Quartz",
+    "Calcite",
+    "Gypsum"
+  ],
+  "wavenumber_cm-1": [
+    200,
+    1200,
+    2
+  ],
+  "validation": "LeaveOneGroupOut, group=RRUFF ID",
+  "models_fixed_before_evaluation": [
+    "Dummy",
+    "Cosine_1NN",
+    "PCA8_LR",
+    "RBF_SVC"
+  ],
+  "hyperparameters": {
+    "PCA_components": 8,
+    "LR_C": 1.0,
+    "SVC_C": 10.0,
+    "SVC_gamma": "scale"
+  },
+  "normalization": "L2 per spectrum; scale/PCA fitted inside each training fold",
+  "selection": "No model selection or tuning on the reported out-of-fold results; report all four.",
+  "vote_tie": "Lowest class index in Quartz, Calcite, Gypsum order",
+  "augmentation": "None",
+  "external_instrument_test": "None"
+}
