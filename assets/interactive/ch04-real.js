@@ -6,7 +6,8 @@
   const names={Quartz:'石英',Calcite:'方解石',Gypsum:'石膏'}, cls=d.results.class_order;
   const label=c=>`${names[c]} ${c}`;
   for(const s of d.spectra){const o=document.createElement('option');o.value=s.id;o.textContent=`${names[s.mineral]} · ${s.specimen} · ${s.laser} nm · 谱 ${s.id}`;$('spectrum').append(o);}
-  for(const name of Object.keys(d.results.metrics)){const o=document.createElement('option');o.value=name;o.textContent=name;$('model').append(o);}
+  const desc={Dummy:'多数类基线',Cosine_1NN:'余弦最近邻',PCA8_LR:'PCA＋逻辑回归',RBF_SVC:'RBF核支持向量机'};
+  for(const name of Object.keys(d.results.metrics)){const o=document.createElement('option');o.value=name;o.textContent=desc[name]?`${name} · ${desc[name]}`:name;$('model').append(o);}
   $('model').value='Cosine_1NN';
   const NS='http://www.w3.org/2000/svg';
   function elem(tag,attrs,text){const e=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));if(text!==undefined)e.textContent=text;return e;}
@@ -19,10 +20,11 @@
   }
   function update(){const s=d.spectra.find(v=>v.id===$('spectrum').value),model=$('model').value;
     const p=d.predictions.find(v=>v.model===model&&v.spectrum_id===s.id),m=d.results.metrics[model].specimen;
-    $('record').replaceChildren(document.createTextNode(`参考矿物：${label(s.mineral)}；激光波长：${s.laser} nm；来源记录：`));
+    $('record').replaceChildren(document.createTextNode(`参考类别：${label(s.mineral)}；激光波长：${s.laser} nm；RRUFF标本：`));
     const a=document.createElement('a');a.href=`https://rruff.info/${s.specimen}`;a.textContent=s.specimen;a.target='_blank';a.rel='noopener';$('record').append(a);
-    $('prediction').textContent=`第${p.fold}折：训练时未使用标本 ${s.specimen} 的任何谱。该谱预测：${label(cls[p.predicted_class])}。`;
-    $('summary').textContent=`${model}：标本级宏F1 ${m.macro_f1.toFixed(4)}，平衡准确率 ${m.balanced_accuracy.toFixed(4)}`;
+    const right=cls[p.predicted_class]===s.mineral;
+    $('prediction').textContent=`第${p.fold}折：训练集不含标本 ${s.specimen} 的任何光谱。预测类别：${label(cls[p.predicted_class])}（${right?'正确':'错误'}）。`;
+    $('summary').textContent=`${model}：标本级宏平均F1 ${m.macro_f1.toFixed(4)}，平衡准确率 ${m.balanced_accuracy.toFixed(4)}`;
     const head=$('matrix').tHead,body=$('matrix').tBodies[0];head.replaceChildren();body.replaceChildren();
     const hr=head.insertRow();['参考 ↓ / 预测 →',...cls.map(c=>names[c])].forEach(v=>{const e=document.createElement('th');e.scope='col';e.textContent=v;hr.append(e);});
     m.confusion_matrix.forEach((r,i)=>{const tr=body.insertRow(),h=document.createElement('th');h.scope='row';h.textContent=names[cls[i]];tr.append(h);r.forEach(v=>{const e=tr.insertCell();e.textContent=v;e.style.background=`rgba(23,108,150,${v/10*.3})`;});});draw(s);
