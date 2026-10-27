@@ -1,74 +1,62 @@
 # 智能分析化学 · G04 小组工作区
 
-我们负责第4章机器学习，以**真实拉曼谱的矿物分类与按标本验证**为主案例，讲清机器学习怎样预测未见样品、如何避免数据泄漏。另保留受控模拟，用于解释仪器变化与泛化失败。本仓库基于[课程原仓库](https://github.com/Oaham725/intelligent-analytical-chemistry)的教材底稿继续完善，小组新增工作集中在第4章及其配套资源。
+我们负责第4章机器学习，当前主案例使用DTU存档中的**全部5,228条实测拉曼谱来源记录**，讲清数据质量审查、矿物分类与分组验证。原来的52条三分类案例保留为入门演示，模拟实验用于说明数据泄漏和仪器变化。
 
-**当前阶段：在自己的仓库完善材料。** 已核验成果汇总在本仓库 [`main`](https://github.com/hachimi-rabbit/intelligent-analytical-chemistry/tree/main) 主分支，打开仓库首页即可阅读。暂不创建或重新开启课程仓库的 Issue / PR；正式提交由作者确认后安排。
+## 先看这些材料
 
-## 第一次打开，从这里开始
+- **课堂汇报：** [全量版PPT](resources/annual/2026-2027/student-reports/ch04/G04-Raman-Full-Report-new.pptx)，逐字讲稿与答辩准备在每页备注中。
+- **教材正文：** [第4章](docs/ch04.md)，全量实测案例在4.8.7节。
+- **代码与数据：** [全量代码与输出](code/ch04_exercises/rruff_full/)，方法见第4章4.8.7节。
+- **交互演示：** [全量页面](assets/interactive/ch04-full.html)、[三分类入门](assets/interactive/ch04-real.html)、[模拟泄漏](assets/interactive/ch04.html)。
+- **组内协作：** [要求对照](resources/annual/2026-2027/student-reports/ch04/README.md)、[分工与复现说明](resources/annual/2026-2027/student-reports/ch04/collaboration.md)。
 
-1. **想知道最终交什么、现在缺什么：** 阅读[要求对照与待办清单](resources/annual/2026-2027/student-reports/ch04/README.md)。
-2. **想理解专题内容：** 阅读[第4章正文](docs/ch04.md)，再看[汇报PDF](resources/annual/2026-2027/student-reports/ch04/G04-Raman-Real-Report.pdf)。
-3. **想体验互动：** 按下方“打开互动页面”的步骤操作。
-4. **负责代码复现：** 阅读[真实谱运行说明](code/ch04_exercises/rruff_real/README.md)，其中有安装命令、输出解释和检查方法。
+## 全量实验用了多少数据
 
-GitHub仓库可以理解为带修改历史的网上项目文件夹；README就是这份使用说明。`.md`是文字材料，`.py`是Python程序，`.csv`是数据表，`.svg`是可编辑图，`.html`是网页，`.pptx`和`.pdf`是汇报文件。
+| 范围 | 数量与用途 |
+|---|---|
+| 来源记录 | 5,228条谱，2,858个标本ID，1,674类 |
+| 冲突隔离 | 10条记录，原因保留在完整清单中 |
+| 最终训练 | 5,218条谱，2,853个标本，1,669类；四个模型均已完成拟合 |
+| 五折验证 | 3,419条谱，1,790个标本合为1,789组，覆盖606类 |
+| 仅训练类别 | 1,063类只有一个验证组，没有同类新标本的验证分数 |
 
-## 最后要交的成果，以及现在已有的材料
+谱来自[DTU作者存档v1](https://doi.org/10.11583/DTU.20222331.v1)，许可CC BY 4.0，原始数据库RRUFF。光谱已由来源方处理，本组没有新做仪器测量。为让所有可用谱具有共同输入，本实验使用304–852 cm⁻¹的275点网格，不外推、不补零。共同区间之外的峰没有参与分类。
 
-按本次课程评分截图，总评为**大作业70%＋课堂汇报30%**。完整权重与验收条件见[要求对照](resources/annual/2026-2027/student-reports/ch04/README.md)。
+| 固定模型 | 组级正确率 | 宏F1 |
+|---|---:|---:|
+| 多数类基线 | 1.06% | 0.000035 |
+| 余弦近邻 | 70.04% | 0.677584 |
+| PCA8＋逻辑回归 | 46.90% | 0.354088 |
+| RBF-SVM | 71.10% | 0.671116 |
 
-| 成果 | 打开材料 | 当前状态 |
-|---|---|---|
-| 第4章教材内容 | [正文](docs/ch04.md) | 4.1–4.9节已有初稿，覆盖基础方法、验证、解释、案例和前沿 |
-| 图解与结果图 | [知识图谱](assets/graphs/ch04.svg)、[验证流程图](assets/graphs/ch04-validation.svg)、[真实谱实验输出](code/ch04_exercises/rruff_real/outputs/) | 已有可编辑SVG；正文分别嵌入实测谱与分组结果、模拟对照图 |
-| 参考文献与前沿 | [年度第4章引文](resources/annual/2026-2027/references/README.md#ch04)、[正文前沿卡](docs/ch04.md) | 24项来源、3张前沿卡；已统一书目格式；重点来源已复核，仍需组员核读 |
-| 传承题与答案 | [第4章题目](resources/annual/2026-2027/questions/README.md#ch04) | 已有6道题及评分要点 |
-| 可复现代码与数据说明 | [真实谱代码说明](code/ch04_exercises/rruff_real/README.md)、[52条谱来源清单](code/ch04_exercises/rruff_real/data/manifest.csv) | 已有一条命令复现、分步日志和结果一致性检查，待组员独立复现 |
-| 互动学习模块 | [真实谱互动页面](assets/interactive/ch04-real.html) | 查看52条实测谱、来源身份和四个模型；另保留模拟交互 |
-| 课堂汇报 | [PPTX](resources/annual/2026-2027/student-reports/ch04/G04-Raman-Real-Report.pptx)、[PDF](resources/annual/2026-2027/student-reports/ch04/G04-Raman-Real-Report.pdf)、[讲稿](resources/annual/2026-2027/student-reports/ch04/speaker-notes-real.md) | 已有12页初稿，待分工、排练和实际汇报 |
-| 协作与正式提交 | [课程流程](docs/course/workflow.md) | 已有个人分支提交记录；正式提交、真人交叉评审和教师审核尚未完成 |
+这些是606个可验证类别的数据库内分组成绩，没有独立外部实验室测试。SVM正确率略高，近邻宏F1略高；本次没有调参或差异显著性检验。最终模型用全部5,218条可训练谱重新拟合，其训练分数不作为测试成绩。
 
-上述数量是现有材料数量，不是教师规定的篇数、题数或页数。材料齐备和自动检查通过，不等于已经获得课程评分或完成课堂汇报。
+## 打开交互页面
 
-## 打开互动页面
+只看演示不需要安装Python。下载或复制**整个项目目录**，保留相邻文件，双击 `assets/interactive/ch04-full.html`。选择矿物、光谱与模型，查看来源身份和折外预测。单组类别会明确显示“仅参与训练”。页面离线读取实际计算结果，不在浏览器中重新训练。
 
-GitHub中的HTML文件链接通常展示源文件，不会直接运行交互。只看互动模块，不需要安装Python：
+建议演示顺序：Quartz的折外预测与模型切换；Abelsonite的仅训练提示；打开 `ch04.html` 对比随机和按标本划分。GitHub的HTML文件页面显示源码，需要完整下载后打开。
 
-1. 在仓库左上方分支菜单确认当前为 `main`。
-2. 点击绿色 **Code → Download ZIP**，下载并完整解压当前分支。
-3. 在解压后的文件夹中，依次打开 `assets` → `interactive`，双击 `ch04-real.html`。
-4. 选择矿物谱与模型，查看RRUFF ID、激光波长、折外预测及标本级混淆矩阵。模拟扩展另打开 `ch04.html`。
+## 复现全量实验
 
-保留整个解压目录，页面需要相邻的CSS和JS文件。模块使用已有Python计算结果，浏览器负责交互展示，不会现场重新训练模型，也不需要联网下载数据。
-
-若要预览完整教材，安装Python后，在包含本README的仓库根目录打开终端并运行：
+在仓库根目录，使用Python 3.12虚拟环境并安装依赖：
 
 ```bash
-python -m http.server 8000
+python -m venv .venv
+# Windows：.venv\Scripts\activate
+# macOS/Linux：source .venv/bin/activate
+python -m pip install -r code/ch04_exercises/raman/requirements.txt
+python code/ch04_exercises/rruff_full/reproduce.py
 ```
 
-Windows也可使用 `py -m http.server 8000`。随后访问 `http://localhost:8000/#/docs/ch04`。完整教材依赖外部网页脚本，需要联网；独立互动页可离线使用。
+输出放入 `rruff_full/reproduced/`，其中包括预测、图表和四个最终模型。默认读取附带数值矩阵，无需重新下载来源ZIP。[第4章4.8.7节](docs/ch04.md)解释记录排除、相同输入合组、折分配和评价范围。
 
-## 接下来小组先做什么
+完整教材预览：`python -m http.server 8000`，访问 `http://localhost:8000/#/docs/ch04`。完整教材依赖外部脚本，需要联网；独立交互页面可离线使用。
 
-- [ ] 确认组员和实际分工，在个人工作记录中写清负责人及对应修改。
-- [ ] 由另一位组员按运行说明独立复现，记录环境、命令、结果和遇到的问题。
-- [ ] 核读正文与已嵌入的结果图，试做传承题，检查论述是否得到文献和数据支持。
-- [ ] 在汇报用电脑上演示互动页面，准备PPT分工并排练答辩。
-- [ ] 作者确认可以正式提交后，再按课程流程办理任务登记、Issue、PR和交叉评审。
+## 作业材料与提交
 
-建议按“正文与公式、代码与复现、文献与题目、图表与汇报”分工，每人从个人仓库的 `main` 建立任务分支。具体操作见[组内协作与复现记录](resources/annual/2026-2027/student-reports/ch04/collaboration.md)。组员姓名和贡献按实际工作填写。
+按课程截图，总评为大作业70%＋汇报30%。现有材料包括正文、可编辑图解、24项来源与3张前沿卡、8道传承题及答案、可运行代码、全量与模拟交互，以及8页全量汇报。模型数量和数据量不是单独的评分指标，具体要求见[评分对照](resources/annual/2026-2027/student-reports/ch04/README.md)。
 
-## 数据范围与使用限制
+当前仍在小组仓库完善材料。实际分工、组员理解、课堂排练、正式Issue/PR与交叉评审按真实完成情况落实。课程主分支由教师或助教审核合并。
 
-**真实主案例：** 从[DTU作者存档v1](https://doi.org/10.11583/DTU.20222331.v1)取得52条来源方已处理的实测RRUFF谱，包含石英10、方解石10、石膏2个标本ID。已保留来源、CC BY 4.0归属和数据校验和，按ID做22折留一验证。三个分类模型的标本宏F1均为1.0000，多数类基线为0.2083。石膏标本太少且尚无外部测试，高分只描述当前小数据集。不同激光波长不能当作不同仪器，本次不作真实跨仪器结论。
-
-**模拟教学对照：** `code/ch04_exercises/raman/`仍全部为生成数据，包括90个模拟标本、540条谱、四个基线、199次标签置换及五种子的预处理比较。模拟的A/B下降和arPLS改善不属于真实数据结果。历史[模拟汇报](resources/annual/2026-2027/student-reports/ch04/G04-Raman-Report.pdf)保留供参考，当前课堂稿使用上方真实数据汇报。
-
-详细来源、方法、结果和限制见[真实谱说明](code/ch04_exercises/rruff_real/README.md)及[模拟说明](code/ch04_exercises/raman/README.md)。
-
-## 教材来源与发布状态
-
-保留的其他章节、课程流程和原始目录来自[课程原仓库](https://github.com/Oaham725/intelligent-analytical-chemistry)。可查看[全书阅读说明](docs/README.md)、[课程任务地图](docs/course/task-map.md)和[课程量规](docs/course/rubric.md)。本页介绍G04个人工作区，不代表课程维护方的正式公告。
-
-仓库已有Pages工作流，`main` 推送符合其触发条件；是否成功发布取决于本仓库的Actions与Pages设置，不能仅凭推送成功判断网站已更新。原有 `publish_github.sh` 是发布工具，不属于阅读或复现实验的步骤；本阶段先使用上述文件与本地预览方式。
+本项目基于[课程原仓库](https://github.com/Oaham725/intelligent-analytical-chemistry)。旧 `G04-Raman-Real-Report` 为52条三分类入门课件，`G04-Raman-Report` 为模拟课件，当前课堂主稿是 `G04-Raman-Full-Report`。

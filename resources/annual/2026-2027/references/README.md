@@ -91,7 +91,7 @@
    - 用途：4.8：原始数据库入口。4.8.6已通过DTU作者存档使用历史RRUFF实测谱；未假定存在配对双仪器数据。
 
 22. Li, B.; Schmidt, M. N.; Alstrøm, T. S. [Datasets for replicating the paper “Raman Spectrum Matching with Contrastive Representation Learning”](https://doi.org/10.11583/DTU.20222331.v1). Technical University of Denmark, version 1 (2022). CC BY 4.0.
-   - 用途：4.8.6真实主案例的直接数据来源。下载并核验存档，保留52条已处理实测谱及22个RRUFF ID；不是原始探测器信号。
+   - 用途：4.8.6入门案例与4.8.7全量主案例的直接数据来源。全量读取5,228条已处理实测谱，审查后使用5,218条；不是原始探测器信号。
 
 23. Li, B.; Schmidt, M. N.; Alstrøm, T. S. [Raman spectrum matching with contrastive representation learning](https://doi.org/10.1039/D2AN00403H). *Analyst* **147**, 2238–2246 (2022).
    - 用途：说明数据存档所属研究及元数据映射来源。本案例使用其数据，不宣称复现该论文的对比学习模型或性能。

@@ -1,0 +1,199 @@
+{
+  "source_spectra": 5228,
+  "source_specimens": 2858,
+  "source_classes": 1674,
+  "usable_spectra": 5218,
+  "usable_specimens": 2853,
+  "usable_classes": 1669,
+  "usable_validation_groups": 2852,
+  "evaluated_spectra": 3419,
+  "evaluated_groups": 1789,
+  "evaluated_specimens": 1790,
+  "evaluated_classes": 606,
+  "training_only_spectra": 1799,
+  "training_only_classes": 1063,
+  "excluded_spectra": 10,
+  "metrics": {
+    "Dummy": {
+      "group": {
+        "accuracy": 0.010620458356623811,
+        "macro_f1": 3.4682671807003715e-05,
+        "balanced_accuracy": 0.0016501650165016502,
+        "correct": 19,
+        "total": 1789
+      },
+      "spectrum": {
+        "accuracy": 0.012284293653114946,
+        "macro_f1": 4.005023443690801e-05,
+        "balanced_accuracy": 0.0016501650165016502,
+        "correct": 42,
+        "total": 3419
+      }
+    },
+    "Cosine_1NN": {
+      "group": {
+        "accuracy": 0.7003912800447177,
+        "macro_f1": 0.6775839284679707,
+        "balanced_accuracy": 0.6713670453704325,
+        "correct": 1253,
+        "total": 1789
+      },
+      "spectrum": {
+        "accuracy": 0.6999122550453349,
+        "macro_f1": 0.6692670523162002,
+        "balanced_accuracy": 0.6511952569075762,
+        "correct": 2393,
+        "total": 3419
+      }
+    },
+    "PCA8_LR": {
+      "group": {
+        "accuracy": 0.4689770821688094,
+        "macro_f1": 0.35408763102997426,
+        "balanced_accuracy": 0.37314892830135143,
+        "correct": 839,
+        "total": 1789
+      },
+      "spectrum": {
+        "accuracy": 0.47996490201813397,
+        "macro_f1": 0.35013543786704493,
+        "balanced_accuracy": 0.3552645351721298,
+        "correct": 1641,
+        "total": 3419
+      }
+    },
+    "RBF_SVC": {
+      "group": {
+        "accuracy": 0.7110117384013416,
+        "macro_f1": 0.6711157694069095,
+        "balanced_accuracy": 0.6666974589785949,
+        "correct": 1272,
+        "total": 1789
+      },
+      "spectrum": {
+        "accuracy": 0.7145364141561861,
+        "macro_f1": 0.6633884556022309,
+        "balanced_accuracy": 0.6473041866071253,
+        "correct": 2443,
+        "total": 3419
+      }
+    }
+  },
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "sklearn": "1.8.0"
+  },
+  "warnings": [],
+  "timings": [
+    {
+      "model": "Dummy",
+      "fold": 0,
+      "seconds": 0.001313165994361043
+    },
+    {
+      "model": "Dummy",
+      "fold": 1,
+      "seconds": 0.0005591250373981893
+    },
+    {
+      "model": "Dummy",
+      "fold": 2,
+      "seconds": 0.0005300000193528831
+    },
+    {
+      "model": "Dummy",
+      "fold": 3,
+      "seconds": 0.000512500002514571
+    },
+    {
+      "model": "Dummy",
+      "fold": 4,
+      "seconds": 0.0005153749953024089
+    },
+    {
+      "model": "Cosine_1NN",
+      "fold": 0,
+      "seconds": 0.019086457963567227
+    },
+    {
+      "model": "Cosine_1NN",
+      "fold": 1,
+      "seconds": 0.017649249988608062
+    },
+    {
+      "model": "Cosine_1NN",
+      "fold": 2,
+      "seconds": 0.012084332993254066
+    },
+    {
+      "model": "Cosine_1NN",
+      "fold": 3,
+      "seconds": 0.0118424579850398
+    },
+    {
+      "model": "Cosine_1NN",
+      "fold": 4,
+      "seconds": 0.011842666019219905
+    },
+    {
+      "model": "PCA8_LR",
+      "fold": 0,
+      "seconds": 16.162595207977574
+    },
+    {
+      "model": "PCA8_LR",
+      "fold": 1,
+      "seconds": 14.767877875012346
+    },
+    {
+      "model": "PCA8_LR",
+      "fold": 2,
+      "seconds": 16.10883354197722
+    },
+    {
+      "model": "PCA8_LR",
+      "fold": 3,
+      "seconds": 15.595695124997292
+    },
+    {
+      "model": "PCA8_LR",
+      "fold": 4,
+      "seconds": 14.587983292003628
+    },
+    {
+      "model": "RBF_SVC",
+      "fold": 0,
+      "seconds": 7.564148208999541
+    },
+    {
+      "model": "RBF_SVC",
+      "fold": 1,
+      "seconds": 7.390165125019848
+    },
+    {
+      "model": "RBF_SVC",
+      "fold": 2,
+      "seconds": 7.327264750027098
+    },
+    {
+      "model": "RBF_SVC",
+      "fold": 3,
+      "seconds": 7.183654625026975
+    },
+    {
+      "model": "RBF_SVC",
+      "fold": 4,
+      "seconds": 7.397943583026063
+    }
+  ],
+  "limits": [
+    "Source-processed measured spectra, not newly collected raw detector signals.",
+    "One RRUFF ID is a grouping proxy, not evidence of independent parent rock or locality.",
+    "Laser wavelength does not identify a spectrometer.",
+    "The 304–852 cm-1 common interval discards peaks outside this window; scope differs from the three-class example.",
+    "Scores apply only to classes with at least two validation groups.",
+    "Single-group classes contribute training references but have no new-specimen score.",
+    "No external-laboratory validation and no hyperparameter search."
+  ]
+}
