@@ -1,0 +1,222 @@
+{
+  "source_doi": "10.11583/DTU.20222331.v1",
+  "source_archive_sha256": "90f029cda4380f74d7f51b0295532e68cf196b1de8afa3c6a9dd225f9bad398f",
+  "download_url": "https://ndownloader.figshare.com/files/36144495",
+  "license": "CC BY 4.0",
+  "source_spectra": 5228,
+  "source_specimens": 2858,
+  "source_classes": 1674,
+  "usable_spectra": 5218,
+  "usable_specimens": 2853,
+  "usable_classes": 1669,
+  "usable_validation_groups": 2852,
+  "duplicate_pairs": [
+    {
+      "spectrum_a": 38625,
+      "spectrum_b": 38623,
+      "same_source_array": true,
+      "same_label": true
+    },
+    {
+      "spectrum_a": 24364,
+      "spectrum_b": 24902,
+      "same_source_array": false,
+      "same_label": true
+    },
+    {
+      "spectrum_a": 36789,
+      "spectrum_b": 36805,
+      "same_source_array": true,
+      "same_label": false
+    },
+    {
+      "spectrum_a": 38647,
+      "spectrum_b": 38645,
+      "same_source_array": true,
+      "same_label": true
+    },
+    {
+      "spectrum_a": 24366,
+      "spectrum_b": 24908,
+      "same_source_array": false,
+      "same_label": true
+    },
+    {
+      "spectrum_a": 36791,
+      "spectrum_b": 36807,
+      "same_source_array": true,
+      "same_label": false
+    },
+    {
+      "spectrum_a": 12927,
+      "spectrum_b": 12929,
+      "same_source_array": true,
+      "same_label": false
+    }
+  ],
+  "excluded_records": [
+    {
+      "spectrum_id": "7204",
+      "specimen_id": "R050194",
+      "mineral": "Bromellite",
+      "validation_group": "R050194",
+      "laser_nm": 514.0,
+      "source_list_index": 775,
+      "source_filename": "Bromellite__R050194__Raman__514__0__unoriented__Raman_Data_Processed__7204.txt",
+      "points": 1146,
+      "axis_min": 54.61899948120117,
+      "axis_max": 1523.083984375,
+      "status": "excluded",
+      "reason": "conflicting_mineral_labels_for_specimen",
+      "matrix_row": -1
+    },
+    {
+      "spectrum_id": "36789",
+      "specimen_id": "R120021",
+      "mineral": "Diadochite",
+      "validation_group": "R120021",
+      "laser_nm": 532.0,
+      "source_list_index": 1368,
+      "source_filename": "Diadochite__R120021__Raman__532__0__unoriented__Raman_Data_Processed__36789.txt",
+      "points": 2302,
+      "axis_min": 193.18299865722656,
+      "axis_max": 1302.532958984375,
+      "status": "excluded",
+      "reason": "identical_source_spectrum_with_conflicting_labels",
+      "matrix_row": -1
+    },
+    {
+      "spectrum_id": "36791",
+      "specimen_id": "R120021",
+      "mineral": "Diadochite",
+      "validation_group": "R120021",
+      "laser_nm": 780.0,
+      "source_list_index": 1369,
+      "source_filename": "Diadochite__R120021__Raman__780__0__unoriented__Raman_Data_Processed__36791.txt",
+      "points": 2473,
+      "axis_min": 93.04987335205078,
+      "axis_max": 1284.842041015625,
+      "status": "excluded",
+      "reason": "identical_source_spectrum_with_conflicting_labels",
+      "matrix_row": -1
+    },
+    {
+      "spectrum_id": "6270",
+      "specimen_id": "R050194",
+      "mineral": "Fluorapatite",
+      "validation_group": "R050194",
+      "laser_nm": 514.0,
+      "source_list_index": 1826,
+      "source_filename": "Fluorapatite__R050194__Raman__514__0__unoriented__Raman_Data_Processed__6270.txt",
+      "points": 911,
+      "axis_min": 115.97100067138672,
+      "axis_max": 1292.83203125,
+      "status": "excluded",
+      "reason": "conflicting_mineral_labels_for_specimen",
+      "matrix_row": -1
+    },
+    {
+      "spectrum_id": "27815",
+      "specimen_id": "R050194",
+      "mineral": "Fluorapatite",
+      "validation_group": "R050194",
+      "laser_nm": 780.0,
+      "source_list_index": 1827,
+      "source_filename": "Fluorapatite__R050194__Raman__780__0__unoriented__Raman_Data_Processed__27815.txt",
+      "points": 2204,
+      "axis_min": 147.44500732421875,
+      "axis_max": 1209.5479736328125,
+      "status": "excluded",
+      "reason": "conflicting_mineral_labels_for_specimen",
+      "matrix_row": -1
+    },
+    {
+      "spectrum_id": "36805",
+      "specimen_id": "R120031",
+      "mineral": "Gelosaite",
+      "validation_group": "R120031",
+      "laser_nm": 532.0,
+      "source_list_index": 2011,
+      "source_filename": "Gelosaite__R120031__Raman__532__0__unoriented__Raman_Data_Processed__36805.txt",
+      "points": 2302,
+      "axis_min": 193.18299865722656,
+      "axis_max": 1302.532958984375,
+      "status": "excluded",
+      "reason": "identical_source_spectrum_with_conflicting_labels",
+      "matrix_row": -1
+    },
+    {
+      "spectrum_id": "36807",
+      "specimen_id": "R120031",
+      "mineral": "Gelosaite",
+      "validation_group": "R120031",
+      "laser_nm": 780.0,
+      "source_list_index": 2012,
+      "source_filename": "Gelosaite__R120031__Raman__780__0__unoriented__Raman_Data_Processed__36807.txt",
+      "points": 2473,
+      "axis_min": 93.04987335205078,
+      "axis_max": 1284.842041015625,
+      "status": "excluded",
+      "reason": "identical_source_spectrum_with_conflicting_labels",
+      "matrix_row": -1
+    },
+    {
+      "spectrum_id": "12927",
+      "specimen_id": "R060839",
+      "mineral": "Margarite",
+      "validation_group": "R060839",
+      "laser_nm": 532.0,
+      "source_list_index": 2989,
+      "source_filename": "Margarite__R060839__Raman__532__0__unoriented__Raman_Data_Processed__12927.txt",
+      "points": 2317,
+      "axis_min": 171.18099975585938,
+      "axis_max": 1287.761962890625,
+      "status": "excluded",
+      "reason": "identical_source_spectrum_with_conflicting_labels",
+      "matrix_row": -1
+    },
+    {
+      "spectrum_id": "16830",
+      "specimen_id": "R060839",
+      "mineral": "Margarite",
+      "validation_group": "R060839",
+      "laser_nm": 785.0,
+      "source_list_index": 2990,
+      "source_filename": "Margarite__R060839__Raman__785__0__unoriented__Raman_Data_Processed__16830.txt",
+      "points": 2257,
+      "axis_min": 179.86349487304688,
+      "axis_max": 1267.51904296875,
+      "status": "excluded",
+      "reason": "identical_source_spectrum_with_conflicting_labels",
+      "matrix_row": -1
+    },
+    {
+      "spectrum_id": "12929",
+      "specimen_id": "R060837",
+      "mineral": "TundriteCe",
+      "validation_group": "R060837",
+      "laser_nm": 532.0,
+      "source_list_index": 4812,
+      "source_filename": "TundriteCe__R060837__Raman__532__0__unoriented__Raman_Data_Processed__12929.txt",
+      "points": 2317,
+      "axis_min": 171.18099975585938,
+      "axis_max": 1287.761962890625,
+      "status": "excluded",
+      "reason": "identical_source_spectrum_with_conflicting_labels",
+      "matrix_row": -1
+    }
+  ],
+  "axis": [
+    304,
+    852,
+    2
+  ],
+  "selection": "All raw==0 source-processed records; no mineral selection or score-based filtering.",
+  "processing": "Linear interpolation on fixed 275-point common-coverage grid; no extrapolation. Per-spectrum L2 and learned transforms are applied by the model pipeline.",
+  "limits": [
+    "Source-processed measured spectra, not newly collected raw detector signals.",
+    "One RRUFF ID is a grouping proxy, not evidence of independent parent rock or locality.",
+    "Laser wavelength does not identify a spectrometer.",
+    "The 304–852 cm-1 common interval discards peaks outside this window; scope differs from the three-class example."
+  ]
+}
