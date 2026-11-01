@@ -9,6 +9,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from apply_report_evidence import apply_report_evidence
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -37,7 +39,7 @@ HEX = dict(green='1E5B3F', mid='4C8C6A', pale='EEF3EF', ink='1F2A30', grey='6B73
 C = {k: RGBColor.from_string(v) for k, v in HEX.items()}
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
 MODELS = {'Dummy': '多数类基线', 'Cosine_1NN': '余弦 1-NN', 'PCA8_LR': 'PCA + 逻辑回归', 'RBF_SVC': 'RBF-SVM'}
-# Mineralogical relation of the most frequent cosine-1NN confusions shown in the error table.
+# Preselected mineral-related examples; these are not the global top-six errors.
 RELATIONS = {
     ('Amblygonite', 'Montebrasite'): ('锂磷铝石 → 羟磷锂铝石', 'F–OH 固溶体'),
     ('Pyrope', 'Almandine'): ('镁铝榴石 → 铁铝榴石', '石榴子石族'),
@@ -654,5 +656,6 @@ s = new_slide('', '参考文献',
     '答：这个问题我们这次没有研究，会后查证后再回复您。')
 text(s, 0.6, 1.65, 12.1, 5.2, [[(f'[{i}] ', 13, C['green'], True), (ref, 13, C['ink'], False)] for i, ref in enumerate(REFERENCES, 1)], space=7)
 
+apply_report_evidence(prs)
 prs.save(OUT)
 print('wrote', OUT, len(prs.slides), 'slides; figures in', FIG)

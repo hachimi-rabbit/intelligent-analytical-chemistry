@@ -1,0 +1,4 @@
+true_mineral,predicted_mineral,validation_group,fold,test_spectrum_id,test_specimen_id,nearest_spectrum_id,nearest_specimen_id,nearest_validation_group,nearest_cosine_similarity,same_class_spectrum_id,same_class_specimen_id,same_class_cosine_similarity,test_laser_nm,nearest_laser_nm,same_class_laser_nm
+Amblygonite,Montebrasite,R040006,4,14787,R040006,15163,R040062,R040062,0.9360729017,15179,R040067,0.9193921793,532,785,785
+Pyrope,Almandine,R050112,2,10098,R050112,9886,R050029,R050029,0.9935939319,31935,R060445,0.986262703,514,514,780
+Grossular,Andradite,R050081,2,10048,R050081,31885,R060423,R060423,0.9733327351,31906,R060278,0.9631830949,514,532,532

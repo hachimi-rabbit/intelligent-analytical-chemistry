@@ -99,6 +99,35 @@
 24. Lafuente, B.; Downs, R. T.; Yang, H.; Stone, N. [The power of databases: the RRUFF project](https://doi.org/10.1515/9783110417104-003). In *Highlights in Mineralogical Crystallography*, pp. 1–30 (2015).
    - 用途：RRUFF数据库原始归属；具体标本链接保留在真实数据manifest中。
 
+25. Rondeau, B.; Fritsch, E.; Lefevre, P.; Guiraud, M.; Fransolet, A.-M.; Lulzac, Y. [A Raman investigation of the amblygonite–montebrasite series](https://doi.org/10.2113/gscanmin.44.5.1109). *The Canadian Mineralogist* **44**, 1109–1117 (2006). [公开原文](https://rruff.info/uploads/CM44_1109.pdf).
+   - 用途：4.8.8：F/OH系列的拉曼鉴别信息与窗口限制；核对摘要及Raman scattering properties部分，不将其样本峰位当成本项目逐标本实测值。
+
+26. Grew, E. S.; Locock, A. J.; Mills, S. J.; Galuskina, I. O.; Galuskin, E. V.; Hålenius, U. [Nomenclature of the garnet supergroup](https://doi.org/10.2138/am.2013.4201). *American Mineralogist* **98**, 785–811 (2013).
+   - 用途：4.8.8：石榴子石结构和端元分类依据；命名规范本身不提供本项目误判原因或发生比例。
+
+27. Kolesov, B. A.; Geiger, C. A. [Raman spectra of silicate garnets](https://doi.org/10.1007/s002690050097). *Physics and Chemistry of Minerals* **25**, 142–151 (1998).
+   - 用途：4.8.8：端元组成与拉曼振动的联系。已核对出版社摘要；不声称各端元全部峰位只差几个波数。
+
+28. Hawthorne, F. C.; Oberti, R.; Harlow, G. E.; Maresch, W. V.; Martin, R. F.; Schumacher, J. C.; Welch, M. D. [Nomenclature of the amphibole supergroup](https://doi.org/10.2138/am.2012.4276). *American Mineralogist* **97**, 2031–2048 (2012).
+   - 用途：4.8.8：角闪石化学位点与命名关系；与第32项物种条目合读，不把理想组成等同于数据集中标本的实测组成。
+
+29. Henry, D. J.; Novák, M.; Hawthorne, F. C.; Ertl, A.; Dutrow, B. L.; Uher, P.; Pezzotta, F. [Nomenclature of the tourmaline-supergroup minerals](https://doi.org/10.2138/am.2011.3636). *American Mineralogist* **96**, 895–913 (2011).
+   - 用途：4.8.8：电气石多位点分类；Fluoruvite与Dravite的差异不能写成只有一种离子置换。已核对出版社及作者机构摘要，具体组成另对照第31、32项。
+
+30. Robert, J.-L.; Della Ventura, G.; Hawthorne, F. C. [Near-infrared study of short-range disorder of OH and F in monoclinic amphiboles](https://doi.org/10.2138/am-1999-1-209). *American Mineralogist* **84**, 86–91 (1999).
+   - 用途：4.8.8：合成richterite–fluororichterite系列的OH/F关系；这是红外研究，不作为本项目拉曼峰差的直接证据。
+
+31. CSIRO. [Fluor-uvite](https://luminescence.csiro.au/material/Fluor-uvite). *CSIRO Spectroscopy Database*, accessed 2026-10-31.
+   - 用途：核对氟钙镁电气石的化学式及电气石分类。该页面列出的反射谱没有用于本项目训练或误判图。
+
+32. Mineral Data Publishing. *Handbook of Mineralogy*, version 1.2 (2001): [Dravite](https://www.handbookofmineralogy.org/pdfs/dravite.pdf), [Richterite](https://www.handbookofmineralogy.org/pdfs/richterite.pdf), [Tremolite](https://www.handbookofmineralogy.org/pdfs/tremolite.pdf), [Actinolite](https://www.handbookofmineralogy.org/pdfs/actinolite.pdf), accessed 2026-10-31.
+   - 用途：核对上述物种的组成、系列与分类；不从矿物手册推算本组拉曼误判率。
+
+33. Wilson, E. B. [Probable inference, the law of succession, and statistical inference](https://doi.org/10.1080/01621459.1927.10502953). *Journal of the American Statistical Association* **22**, 209–212 (1927).
+   - 用途：补齐14页汇报第9页及其参考文献[4]所用Wilson二项比例区间的出处。计算式另对照[SAS官方文档](https://support.sas.com/documentation/cdl/en/procstat/68142/HTML/default/procstat_freq_details37.htm)。未声称阅读全文；本图未校正类别内及交叉验证依赖，不能用其判定两模型等效。
+
+2026-10-31至2026-11-01结论核查：本轮新增第25–33项，重点复核第12–14项前沿结论与全量主案例的适用边界；[逐项证据表](ch04-evidence.md)列出依据、已核读范围及修改后的表述。其他经典方法文献沿用原归档，不标记为本轮逐篇阅读全文。
+
 真实数据补充核对：已验证DTU存档版本、许可、文件哈希及作者映射代码；来源与改动见[归属说明](#/code/ch04_exercises/rruff_real/ATTRIBUTION)。
 
 检索核对日期：2026-10-23。来源为出版社、会议论文站、作者教材站、Crossref书目元数据和官方技术文档。年度前沿集中于2024–2025年可核查材料，不声称穷尽2026年全部研究。Raman验证论文已核对出版社摘要、数据可用性说明和书目信息；未将摘要外实验细节写成已核实事实。当前成果见[个人仓库 main](https://github.com/hachimi-rabbit/intelligent-analytical-chemistry/tree/main)，课程Issue与PR暂缓。
