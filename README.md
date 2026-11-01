@@ -55,9 +55,7 @@ python code/ch04_exercises/rruff_full/reproduce.py
 
 ## 作业材料与提交
 
-按课程截图，总评为大作业70%＋汇报30%。现有材料包括正文、可编辑图解、33项来源与3张前沿卡、8道传承题及答案、可运行代码、全量与模拟交互，以及14页全量汇报。模型数量和数据量不是单独的评分指标，具体要求见[评分对照](resources/annual/2026-2027/student-reports/ch04/README.md)。
-
-本次完善：[结论与引文对应表](resources/annual/2026-2027/references/ch04-evidence.md)、[三人分工与执行记录](resources/annual/2026-2027/student-reports/ch04/collaboration.md)、[维护复现与PCA差异](resources/annual/2026-2027/student-reports/ch04/validation-2026-10-31.md)。正文4.8.8新增矿物误判依据和可复查谱图。XXX、YYY、ZZZ的实际完成与复核记录需在本人执行后补充。
+按课程截图，总评为大作业70%＋汇报30%。现有材料包括正文、可编辑图解、24项来源与3张前沿卡、8道传承题及答案、可运行代码、全量与模拟交互，以及8页全量汇报。模型数量和数据量不是单独的评分指标，具体要求见[评分对照](resources/annual/2026-2027/student-reports/ch04/README.md)。
 
 当前仍在小组仓库完善材料。实际分工、组员理解、课堂排练、正式Issue/PR与交叉评审按真实完成情况落实。课程主分支由教师或助教审核合并。
 
